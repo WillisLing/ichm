@@ -22,11 +22,7 @@
 		C33D3B0E0E4F245600F7B487 /* BookmarkController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33D3B0D0E4F245600F7B487 /* BookmarkController.m */; };
 		C33DE50B0E40A651009FF1F4 /* ichm.css in Resources */ = {isa = PBXBuildFile; fileRef = C33DE50A0E40A651009FF1F4 /* ichm.css */; };
 		C33DE67D0E40C40A009FF1F4 /* highlight.js in Resources */ = {isa = PBXBuildFile; fileRef = C33DE67B0E40C40A009FF1F4 /* highlight.js */; };
-		C346DF070E530E8B00A76373 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C346DF060E530E8B00A76373 /* Sparkle.framework */; };
-		C346DF0B0E530E9E00A76373 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C346DF060E530E8B00A76373 /* Sparkle.framework */; };
 		C35B99FA0E39C23400A63BC3 /* redbird.icns in Resources */ = {isa = PBXBuildFile; fileRef = C35B99F90E39C23400A63BC3 /* redbird.icns */; };
-		C35B9BCE0E39E38500A63BC3 /* PSMTabBarControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35B9BCD0E39E38500A63BC3 /* PSMTabBarControl.framework */; };
-		C35B9BDF0E39E48D00A63BC3 /* PSMTabBarControl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C35B9BCD0E39E38500A63BC3 /* PSMTabBarControl.framework */; };
 		C36FD4240E482D3800496822 /* CHMWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36FD4230E482D3800496822 /* CHMWebView.xib */; };
 		C36FD52C0E48403F00496822 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C36FD52B0E48403F00496822 /* Localizable.strings */; };
 		C3907F3D0EC005430018AA80 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3907F3C0EC005430018AA80 /* Quartz.framework */; };
@@ -38,8 +34,6 @@
 		C3AA9B220E3EC8A200D2FB53 /* CHMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3AA9B210E3EC8A200D2FB53 /* CHMWebViewController.m */; };
 		C3BF8BA00E4FDD7200AE3BEE /* CHMBookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BF8B9F0E4FDD7200AE3BEE /* CHMBookmark.m */; };
 		C3C082250E4557E700D58E19 /* TB_Sidebar.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C082240E4557E700D58E19 /* TB_Sidebar.png */; };
-		C3C396F90E3F8E2800A52FBE /* chm_lib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C396F80E3F8E2800A52FBE /* chm_lib.framework */; };
-		C3C397000E3F8E2E00A52FBE /* chm_lib.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3C396F80E3F8E2800A52FBE /* chm_lib.framework */; };
 		C3D2046B0E53EFAF00D5CA58 /* Bookmark.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D2046A0E53EFAF00D5CA58 /* Bookmark.xib */; };
 		C3D5D3350E5159D5007C51BD /* BookmarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D5D3340E5159D5007C51BD /* BookmarkView.m */; };
 		C3D6EE0B0E3D9E5C00A823A2 /* CHMOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D6EE0A0E3D9E5C00A823A2 /* CHMOutlineView.m */; };
@@ -48,6 +42,12 @@
 		C3DB252F0E2DD646000E5A20 /* ICHMApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DB252E0E2DD646000E5A20 /* ICHMApplication.m */; };
 		C3ED1D870E4307F500C1B93A /* CHMTextEncodingMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1D860E4307F500C1B93A /* CHMTextEncodingMenu.m */; };
 		C3ED1DA00E43106D00C1B93A /* textencoding.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3ED1D9F0E43106D00C1B93A /* textencoding.plist */; };
+		CE80009B183D9D0400DB9E10 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE80009A183D9D0400DB9E10 /* Sparkle.framework */; };
+		CE800111183DA5B000DB9E10 /* PSMTabBarControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE800110183DA5B000DB9E10 /* PSMTabBarControl.framework */; };
+		CE800115183DA72100DB9E10 /* chm_lib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE800114183DA72100DB9E10 /* chm_lib.framework */; };
+		CE800116183DAA4300DB9E10 /* chm_lib.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE800114183DA72100DB9E10 /* chm_lib.framework */; };
+		CE800117183DAA4300DB9E10 /* PSMTabBarControl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE800110183DA5B000DB9E10 /* PSMTabBarControl.framework */; };
+		CE800118183DAA4300DB9E10 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE80009A183D9D0400DB9E10 /* Sparkle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,9 +57,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C346DF0B0E530E9E00A76373 /* Sparkle.framework in CopyFiles */,
-				C3C397000E3F8E2E00A52FBE /* chm_lib.framework in CopyFiles */,
-				C35B9BDF0E39E48D00A63BC3 /* PSMTabBarControl.framework in CopyFiles */,
+				CE800116183DAA4300DB9E10 /* chm_lib.framework in CopyFiles */,
+				CE800117183DAA4300DB9E10 /* PSMTabBarControl.framework in CopyFiles */,
+				CE800118183DAA4300DB9E10 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,9 +100,7 @@
 		C33DE50A0E40A651009FF1F4 /* ichm.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = ichm.css; sourceTree = "<group>"; };
 		C33DE67B0E40C40A009FF1F4 /* highlight.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highlight.js; sourceTree = "<group>"; };
 		C33DE6DC0E40CA96009FF1F4 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
-		C346DF060E530E8B00A76373 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = "<group>"; };
 		C35B99F90E39C23400A63BC3 /* redbird.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = redbird.icns; sourceTree = "<group>"; };
-		C35B9BCD0E39E38500A63BC3 /* PSMTabBarControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PSMTabBarControl.framework; path = Frameworks/PSMTabBarControl.framework; sourceTree = SOURCE_ROOT; };
 		C36FD41A0E4829B400496822 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/CHMDocument.xib; sourceTree = "<group>"; };
 		C36FD41D0E482AFA00496822 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C36FD4520E48368C00496822 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 		C3BF8B9E0E4FDD7200AE3BEE /* CHMBookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHMBookmark.h; sourceTree = "<group>"; };
 		C3BF8B9F0E4FDD7200AE3BEE /* CHMBookmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHMBookmark.m; sourceTree = "<group>"; };
 		C3C082240E4557E700D58E19 /* TB_Sidebar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TB_Sidebar.png; sourceTree = "<group>"; };
-		C3C396F80E3F8E2800A52FBE /* chm_lib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = chm_lib.framework; path = Frameworks/chm_lib.framework; sourceTree = SOURCE_ROOT; };
 		C3D2046C0E53EFB700D5CA58 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/Bookmark.xib; sourceTree = "<group>"; };
 		C3D2046D0E53EFBA00D5CA58 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_CN; path = zh_CN.lproj/Bookmark.xib; sourceTree = "<group>"; };
 		C3D5D3330E5159D5007C51BD /* BookmarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkView.h; sourceTree = "<group>"; };
@@ -155,6 +152,9 @@
 		C3FF6BAE0E585DCF00F9EBC2 /* Spanish */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Spanish; path = Spanish.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C3FF6BAF0E585DD600F9EBC2 /* Spanish */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Spanish; path = Spanish.lproj/CHMWebView.xib; sourceTree = "<group>"; };
 		C3FF6BB00E585DDD00F9EBC2 /* Spanish */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Spanish; path = Spanish.lproj/Bookmark.xib; sourceTree = "<group>"; };
+		CE80009A183D9D0400DB9E10 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		CE800110183DA5B000DB9E10 /* PSMTabBarControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PSMTabBarControl.framework; sourceTree = "<group>"; };
+		CE800114183DA72100DB9E10 /* chm_lib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = chm_lib.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,12 +163,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+				CE800115183DA72100DB9E10 /* chm_lib.framework in Frameworks */,
 				C3DB24CE0E2DB849000E5A20 /* WebKit.framework in Frameworks */,
-				C35B9BCE0E39E38500A63BC3 /* PSMTabBarControl.framework in Frameworks */,
-				C3C396F90E3F8E2800A52FBE /* chm_lib.framework in Frameworks */,
-				C346DF070E530E8B00A76373 /* Sparkle.framework in Frameworks */,
+				CE800111183DA5B000DB9E10 /* PSMTabBarControl.framework in Frameworks */,
 				C3907F3D0EC005430018AA80 /* Quartz.framework in Frameworks */,
 				C3907F690EC005B30018AA80 /* ApplicationServices.framework in Frameworks */,
+				CE80009B183D9D0400DB9E10 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,9 +178,9 @@
 		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C346DF060E530E8B00A76373 /* Sparkle.framework */,
-				C3C396F80E3F8E2800A52FBE /* chm_lib.framework */,
-				C35B9BCD0E39E38500A63BC3 /* PSMTabBarControl.framework */,
+				CE800114183DA72100DB9E10 /* chm_lib.framework */,
+				CE800110183DA5B000DB9E10 /* PSMTabBarControl.framework */,
+				CE80009A183D9D0400DB9E10 /* Sparkle.framework */,
 				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -350,6 +350,8 @@
 /* Begin PBXProject section */
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "ichm" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -536,7 +538,8 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Frameworks\"",
+					"\\\"$(SRCROOT)/Frameworks\\\"",
+					"/Users/user/Downloads/ichm-master",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -562,7 +565,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Frameworks\"",
+					"\\\"$(SRCROOT)/Frameworks\\\"",
+					"/Users/user/Downloads/ichm-master",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

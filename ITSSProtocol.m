@@ -8,6 +8,44 @@
 
 #import "ITSSProtocol.h"
 #import "CHMDocument.h"
+#import <libxml/HTMLparser.h>
+
+typedef struct tag_HeadMetaCharset {
+    BOOL isEnterHeadElement;
+    NSString* charset;
+} HeadMetaCharset;
+
+static void elementDidStart( HeadMetaCharset* ctx, const xmlChar *name, const xmlChar **atts );
+static void elementDidEnd( HeadMetaCharset* ctx, const xmlChar *name );
+
+static htmlSAXHandler saxHandler = {
+    NULL, /* internalSubset */
+    NULL, /* isStandalone */
+    NULL, /* hasInternalSubset */
+    NULL, /* hasExternalSubset */
+    NULL, /* resolveEntity */
+    NULL, /* getEntity */
+    NULL, /* entityDecl */
+    NULL, /* notationDecl */
+    NULL, /* attributeDecl */
+    NULL, /* elementDecl */
+    NULL, /* unparsedEntityDecl */
+    NULL, /* setDocumentLocator */
+    NULL, /* startDocument */
+    NULL, /* endDocument */
+    (startElementSAXFunc) elementDidStart, /* startElement */
+    (endElementSAXFunc) elementDidEnd, /* endElement */
+    NULL, /* reference */
+    NULL, /* characters */
+    NULL, /* ignorableWhitespace */
+    NULL, /* processingInstruction */
+    NULL, /* comment */
+    NULL, /* xmlParserWarning */
+    NULL, /* xmlParserError */
+    NULL, /* xmlParserError */
+    NULL, /* getParameterEntity */
+};
+
 
 @implementation ITSSProtocol
 
@@ -68,6 +106,11 @@
 	if ([[[path pathExtension] lowercaseString] isEqualToString:@"html"] ||
          [[[path pathExtension] lowercaseString] isEqualToString:@"htm"])
 		type = @"text/html";
+    /* ----- */
+    NSString* htmlMetaCharsetEncording = [self get_HtmlMetaCharsetEncoding_FromHtmlContentData:data];
+    if (htmlMetaCharsetEncording) {
+        encoding = htmlMetaCharsetEncording;
+    }
     NSURLResponse *response = [[NSURLResponse alloc] initWithURL: [[self request] URL]
 														MIMEType:type
 										   expectedContentLength:[data length]
@@ -82,7 +125,59 @@
     [response release];	
 }
 
+- (NSString*)get_HtmlMetaCharsetEncoding_FromHtmlContentData:(NSData*)contentData
+{
+    HeadMetaCharset hmc;
+    hmc.isEnterHeadElement = NO;
+    hmc.charset = NULL;
+    
+    htmlDocPtr doc = htmlSAXParseDoc((xmlChar*)[contentData bytes], "UTF-8", &saxHandler, &hmc);
+    
+    if (doc) {
+        xmlFreeDoc(doc);
+    }
+    
+    return hmc.charset;
+}
+
 @end
+
+# pragma mark NSXMLParser delegation
+static void elementDidStart( HeadMetaCharset* ctx, const xmlChar *name, const xmlChar **atts )
+{
+    if (0 == strcasecmp("head", (char *)name))
+    {
+        ctx->isEnterHeadElement = YES;
+    }
+    else if (0 == strcasecmp("meta", (char *)name))
+    {
+        if (ctx->isEnterHeadElement)
+        {
+            if (atts != NULL) {
+                for (int i = 0; atts[i] != NULL; ++i) {
+                    NSLog(@"atts: <%@>", [NSString stringWithUTF8String:(char*)(atts[i])]);
+                    if (i % 2 == 1) {
+                        NSString* att_value = [NSString stringWithUTF8String:(char*)(atts[i])];
+                        att_value = [att_value stringByReplacingOccurrencesOfString:@" " withString:@""];
+                        
+                        NSArray* components = [att_value componentsSeparatedByString:@";"];
+                        for (NSString* __comp in components) {
+                            NSRange range = [__comp rangeOfString:@"charset=" options:NSCaseInsensitiveSearch];
+                            if (range.length != 0) {
+                                ctx->charset = [__comp substringFromIndex:NSMaxRange(range)];
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+static void elementDidEnd( HeadMetaCharset* ctx, const xmlChar *name )
+{
+}
 
 @implementation NSURLRequest (SpecialProtocol)
 
